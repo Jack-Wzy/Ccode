@@ -1,0 +1,15 @@
+int main()
+{
+	printf("加入bit\n");
+	int line = 0;
+	while (line <= 20000)
+	{
+		line++;
+		printf("我要继续努力敲代码！ %d\n",line);
+	}
+	if (line > 20000)
+	{
+		printf("好offer\n");
+	}
+  	return 0;
+}
