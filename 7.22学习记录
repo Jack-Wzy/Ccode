@@ -1,0 +1,302 @@
+#define _CRT_SECURE_NO_DEPRECATE
+#include <stdio.h>
+int main()
+{
+	int no = 28;
+	int sum = 0;
+	int a = 37;
+	int b = 0;
+	b = no;
+	do{
+		sum = sum + no;
+		no = no + 1;
+
+	} while (no>=28&&no<=37);
+	printf("大于等于%d小于等于%d的所有整数和是%d\n", b, a, sum);
+	return 0;
+}
+
+int main()
+{
+	int num1;
+	int num2;
+	int dig;
+	do{
+		printf("请输入一个非负整数：");
+		scanf("%d", &num1);
+		if (num1 < 0)
+			puts("请不要输入负整数。");
+	} while (num1 < 0);
+	num2 = num1;
+	dig = 0;
+	do{
+		num1 = num1 / 10;
+		dig = dig + 1;
+	} while (num1>0);
+	printf("%d的位数是%d\n", num2, dig);
+	return 0;
+}
+
+int main()
+{
+	int num1;
+	int num2;
+	do{
+		printf("请输入一个非负整数：");
+		scanf("%d", &num1);
+		if (num1 < 0)
+			puts("请不要输入负整数。");
+	} while (num1 < 0);
+		num2 = num1;
+		printf("%d逆向显示的结果是：",num2);
+		do{
+			printf("%d", num1 % 10);
+			num1 = num1 / 10;
+		} while (num1>0);
+		puts("。");
+
+	return 0;
+}
+
+
+int main()
+{
+	int no = 1;
+	int sum = 0;
+	do{
+		sum = sum + no;
+		no = no + 1;
+	} while (no <= 5);
+	printf("1到5的合计值是%d\n", sum);
+	return 0;
+}
+
+int main()
+{
+	int num;
+	int dig;
+	do{
+		printf("请输入一个非负整数：");
+		scanf("%d", &num);
+		if (num < 0)
+			puts("请不要输入负整数。");
+	} while (num < 0);
+	dig = 0;
+	do{
+		num = num / 10;
+		dig = dig + 1;
+	} while (num>0);
+	printf("该整数的位数是：%d\n", dig);
+	return 0;
+}
+
+int main()
+{
+	int num;
+	do{
+		printf("请输入一个非负整数：");
+		scanf("%d", &num);
+		if (num < 0)
+			puts("请不要输入一个负整数。");
+	} while (num < 0);
+	printf("该整数逆向显示的结果是：");
+	do{
+		printf("%d", num % 10);
+		num = num / 10;
+	} while (num>0);
+	puts("。");
+	return 0;
+}
+
+int main()
+{
+	int cont;
+	do{
+		int no;
+			printf("请输入一个整数："); 
+		scanf("%d", &no);
+		if (no % 2)
+			puts("这个整数是奇数。");
+		else
+			puts("这个整数是偶数。");
+
+		printf("要重复一次吗？【Yes...0/No...9】:");
+		scanf("%d", &cont);
+	} while (cont == 0);
+	return 0;
+}
+
+int main()
+{
+	int month;
+	printf("请输入月份："); scanf("%d", &month);
+	switch (month)
+	{
+	case 3:puts("是春天。"); 
+	case 4:puts("是春天。"); 
+	case 5:puts("是春天。"); break;
+	case 6:puts("是夏天。"); 
+	case 7:puts("是夏天。"); 
+	case 8:puts("是夏天。"); break;
+	case 9:puts("是秋天。");
+	case 10:puts("是秋天。"); 
+	case 11:puts("是秋天。"); break;
+	case 1:puts("是冬天。"); 
+	case 2:puts("是冬天。"); 
+	case 12:puts("是冬天。"); break;
+	default:puts("不存在这个月份。");
+	}
+	return 0;
+}
+
+int main()
+{
+	int a;
+	printf("请输入一个整数："); scanf("%d", &a);
+	switch (a%2)
+	{
+	case 0:puts("输入的是偶数。"); break;
+	default:puts("输入的是奇数。"); break;
+	}
+	return 0;
+}
+int main()
+{
+	int num;
+	printf("请输入一个整数：");
+	scanf("%d", &num);
+
+	switch (num % 3)
+	{
+	case 0:puts("该整数能被3整除。"); break;
+	case 1:puts("该整数除以3的余数是1。"); break;
+	case 2:puts("该整数除以3的余数是2。"); break;
+	}
+	return 0;
+}
+
+int main()
+{
+	int a, b;
+	puts("请输入两个整数。");
+	printf("整数1："); scanf("%d", &a);
+	printf("整数2："); scanf("%d", &b);
+	if (a > b)
+	{
+		if (a-b<10||a-b==10)
+		    puts("他们的差小于等于10。");
+		else
+		    puts("他们的差大于等于11。");
+	}
+	else
+	{
+		if (b - a<10 || b - a == 10)
+		    puts("他们的差小于等于10。");
+		else
+		    puts("他们的差大于等于11。");
+	}
+	return 0;
+}
+
+int main()
+{
+	int a, b, c;
+	puts("请输入三个整数。");
+	printf("整数1："); scanf("%d", &a);
+	printf("整数2："); scanf("%d", &b);
+	printf("整数3："); scanf("%d", &c);
+	if (a == b == c)
+		puts("他们三个值都相等。");
+	else if (a == b || a == c || b == c)
+		puts("有两个值相等。");
+	else
+		printf("三个值各不相同。\n");
+	return 0;
+
+}
+
+int main()
+{
+	int month;
+	printf("请输入月份："); scanf("%d", &month);
+	if (month >= 3 && month <= 5)
+		puts("是春天。");
+	else if (month >= 6 && month <= 8)
+		puts("是夏天。");
+	else if (month >= 9 && month <= 11)
+		puts("是秋天。");
+	else if (month == 1 || month == 2 || month == 12)
+		puts("是冬天。");
+	else
+		puts("月份不存在！！\a");
+	return 0;
+}
+
+int main()
+{
+	int a, b, max, min;
+	puts("请输入两个整数。");
+	printf("整数1："); scanf("%d", &a);
+	printf("整数2："); scanf("%d", &b);
+	if (a > b)
+	{
+	
+	max = a;
+	min = b;
+}
+	else
+	{
+
+		max = b;
+		min = a;
+	}
+	printf("较大的数是：%d\n", max);
+	printf("较小的数是：%d\n", min);
+	return 0;
+}
+
+int main()
+{
+	int a, b,c, min;
+	puts("请您输入三个整数。");
+	printf("整数1："); scanf("%d", &a);
+	printf("整数2："); scanf("%d", &b);
+	printf("整数3："); scanf("%d", &c);
+	min = a;
+	printf("最小的值为：%d\n", (b < min) ? b : c);
+	return 0;
+}
+
+int main()
+{
+	int a, b;
+	puts("请输入两个整数。");
+	printf("整数1："); scanf("%d", &a);
+	printf("整数2："); scanf("%d", &b);
+	if (a > b)
+		printf("他们的差是：%d\n", a - b);
+	else
+		printf("他们的差是：%d\n", b - a);
+	return 0;
+}
+
+int main()
+{
+	int a, b;
+	puts("请输入两个整数。");
+	printf("整数1："); scanf("%d", &a);
+	printf("整数2："); scanf("%d", &b);
+	printf("他们的差是%d\n", (a > b) ? a - b : b - a);
+	return 0;
+}
+
+int main()
+{
+	int a, b, max;
+	puts("请输入两个整数。");
+	printf("整数1："); scanf("%d", &a);
+	printf("整数2："); scanf("%d", &b);
+	max = (a > b) ? a : b;
+	printf("较大的数是%d\n", max);
+	return 0;
+}
